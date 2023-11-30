@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>NPR News Now</title>
+    <link>https://www.npr.org/podcasts/500005/npr-news-now</link>
+    <description><![CDATA[The latest news in five minutes. Updated hourly.]]></description>
+    <copyright>Copyright 2007-2023 NPR - For Personal Use Only</copyright>
+    <generator>NPR Feed Publish Service v1.15.7</generator>
+    <language>en-us</language>
+    <itunes:author>NPR</itunes:author>
+    <itunes:block>no</itunes:block>
+    <itunes:owner>
+      <itunes:email>podcasts@npr.org</itunes:email>
+      <itunes:name>NPR</itunes:name>
+    </itunes:owner>
+    <itunes:category text="News">
+      <itunes:category text="Daily News"/>
+    </itunes:category>
+    <media:thumbnail url="https://media.npr.org/assets/img/2023/03/01/npr-news-now_wide.png?s=1920&amp;c=66" height="1080" width="1920"/>
+    <itunes:image href="https://media.npr.org/assets/img/2023/03/01/npr-news-now_square.png?s=1400&amp;c=66"/>
+    <itunes:type>episodic</itunes:type>
+    <image>
+      <url>https://media.npr.org/assets/img/2023/03/01/npr-news-now_square.png?s=1400&amp;c=66</url>
+      <title>NPR News Now</title>
+      <link>https://www.npr.org/podcasts/500005/npr-news-now</link>
+    </image>
+    <lastBuildDate>Thu, 30 Nov 2023 01:11:06 +0000</lastBuildDate>
+    <media:restriction type="country" relationship="allow">es fi fr gb nl no se us dk at ch be au nz ca de it ie lu li ad mc pl pt is mx ee lv lt my gr ar hu cz mt bg sk cy br cl co uy sv py hn pa ni pe ec do gt cr bo id jp th ro il za</media:restriction>
+    <item>
+      <title>NPR News: 11-29-2023 8PM EST</title>
+      <description><![CDATA[NPR News: 11-29-2023 8PM EST]]></description>
+      <pubDate>Thu, 30 Nov 2023 01:00:00 +0000</pubDate>
+      <guid isPermaLink="false">57c34f60-8964-50e3-993a-b1f0394b976a</guid>
+      <itunes:block>no</itunes:block>
+      <itunes:title>NPR News: 11-29-2023 8PM EST</itunes:title>
+      <itunes:duration>300</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <content:encoded><![CDATA[NPR News: 11-29-2023 8PM EST]]></content:encoded>
+      <enclosure length="5433210" type="audio/mpeg" url="https://play.podtrac.com/npr-500005/traffic.megaphone.fm/NPR2715453684.mp3?p=500005&amp;e=nsv2-1701306000000-s1-long&amp;d=300&amp;t=podcast&amp;size=5433210"/>
+    </item>
+  </channel>
+</rss>
