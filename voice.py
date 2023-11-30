@@ -42,7 +42,7 @@ while 1:
             MyText = r.recognize_google(audio2)
             MyText = MyText.lower()
             if "weather" in MyText or "temperature" in MyText:
-                SpeakText(features.weather('Boise, US', 'celsius'))
+                SpeakText(features.weather('California, US', 'celsius'))
             elif 'news' in MyText:
                 features.npr()
             elif 'search' in MyText:
