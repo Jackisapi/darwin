@@ -3,7 +3,8 @@ import news
 import requests
 import playsound
 import os
-from duckduckgo_search import DDGS
+# from duckduckgo_search import DDGS
+from gpt4all import GPT4All
 
 
 def weather(location, temp_type, key=os.getenv("open_weather")):
@@ -22,11 +23,9 @@ def npr():
     playsound.playsound('file.mp3', True)
 
 
-def search(search_quere,result_num):
-    with DDGS() as ddgs:
-        results = [r for r in ddgs.text(search_quere,max_results=100)]
-        source = results[result_num]['href']
-        info = results[result_num]['body']
-        return [f'Results From {source},', info]
-
+def search(quere, model):
+    model = GPT4All(model)
+    with model.chat_session():
+        response = model.generate(prompt=quere)
+        return response
 

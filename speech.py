@@ -11,3 +11,4 @@ def stock_voice():
 def config_test():
     engine.say("This is your current audio configuration is this ok?")
     engine.runAndWait( )
+

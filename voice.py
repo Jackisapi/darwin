@@ -4,6 +4,8 @@ import speech_recognition as sr
 import pyttsx3
 import speech
 import features
+
+phrase = 'hey darwin'
 # Initialize the recognizer
 r = sr.Recognizer()
 
@@ -39,31 +41,40 @@ while 1:
 
 
             # Using google to recognize audio
+
+
             MyText = r.recognize_google(audio2)
             MyText = MyText.lower()
-            if "weather" in MyText or "temperature" in MyText:
+            if phrase + " weather" in MyText or "temperature" in MyText:
                 SpeakText(features.weather('California, US', 'celsius'))
-            elif 'news' in MyText:
+            elif phrase + ' news' in MyText:
                 features.npr()
-            elif 'search' in MyText:
-                prompt_satisfied = False
-                search_num = 0
-                while prompt_satisfied != True:
-                    SpeakText('What Would You Like To Search For ?' )
-                    search_queue = r.listen(source2)
-                    search_queue = r.recognize_google(search_queue)
-                    search_results = features.search(search_queue,search_num)
-                    SpeakText(search_results[0])
-                    time.sleep(2)
-                    SpeakText(search_results[1])
-                    time.sleep(2)
-                    SpeakText('Would You Like to hear from a different source? ')
-                    check_prompt = r.listen(source2)
-                    check_prompt = r.recognize_google(check_prompt)
-                    if 'no' in check_prompt:
-                        prompt_satisfied = True
-                    elif 'yes' in check_prompt:
-                        search_queue += 1
+            elif phrase + ' search' in MyText:
+                SpeakText('Hello due to issues beyond my control i cannot use a search engine resolution, using gpt4all')
+                time.sleep(2)
+                SpeakText('What would you like to search for? ')
+                search_queue = r.listen(source2)
+                search_queue = r.recognize_google(search_queue)
+                search_results = features.search(search_queue,"Mistral OpenOrca")
+                # prompt_satisfied = False
+                # search_num = 0
+                # while prompt_satisfied != True:
+                #     SpeakText('What Would You Like To Search For ?' )
+                #     search_queue = r.listen(source2)
+                #     search_queue = r.recognize_google(search_queue)
+                #     search_results = features.search(search_queue,search_num)
+                #
+                #     SpeakText(search_results[0])
+                #     time.sleep(2)
+                #     SpeakText(search_results[1])
+                #     time.sleep(2)
+                #     SpeakText('Would You Like to hear from a different source? ')
+                #     check_prompt = r.listen(source2)
+                #     check_prompt = r.recognize_google(check_prompt)
+                #     if 'no' in check_prompt:
+                #         prompt_satisfied = True
+                #     elif 'yes' in check_prompt:
+                #         search_queue += 1
             elif "hey darwin" not in MyText:
                 print("Did you say ", MyText)
                 SpeakText(MyText)
