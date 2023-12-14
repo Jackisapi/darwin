@@ -55,7 +55,7 @@ while 1:
                 SpeakText('What would you like to search for? ')
                 search_queue = r.listen(source2)
                 search_queue = r.recognize_google(search_queue)
-                search_results = features.search(search_queue,"Mistral OpenOrca")
+                search_results = features.search(search_queue,"mistral-7b-instruct-v0.1.Q4_0.gguf")
                 # prompt_satisfied = False
                 # search_num = 0
                 # while prompt_satisfied != True:
