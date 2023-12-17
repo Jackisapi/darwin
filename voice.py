@@ -45,6 +45,7 @@ while 1:
 
             MyText = r.recognize_google(audio2)
             MyText = MyText.lower()
+            print(MyText)
             if phrase + " weather" in MyText or "temperature" in MyText:
                 SpeakText(features.weather('California, US', 'celsius'))
             elif phrase + ' news' in MyText:
@@ -53,6 +54,7 @@ while 1:
                 SpeakText('Hello due to issues beyond my control i cannot use a search engine resolution, using gpt4all')
                 time.sleep(2)
                 SpeakText('What would you like to search for? ')
+                time.sleep(1)
                 search_queue = r.listen(source2)
                 search_queue = r.recognize_google(search_queue)
                 search_results = features.search(search_queue,"mistral-7b-instruct-v0.1.Q4_0.gguf")
@@ -78,8 +80,8 @@ while 1:
             elif "hey darwin" not in MyText:
                 print("Did you say ", MyText)
                 SpeakText(MyText)
-            else:
-                SpeakText('Hello My name is darwin I dont do much yet but I hope to be of great use')
+            # else:
+            #     SpeakText('Hello My name is darwin I dont do much yet but I hope to be of great use')
 
     except sr.RequestError as e:
         continue
